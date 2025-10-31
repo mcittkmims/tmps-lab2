@@ -1,8 +1,11 @@
 package com.tmps;
 
 
+import com.tmps.client.GameController;
+
 public class Main {
     public static void main(String[] args) {
-        // Delegate to the new application entry point
+        GameController controller = new com.tmps.client.GameController();
+        controller.start();
     }
 }

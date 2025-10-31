@@ -11,11 +11,19 @@ public class GameState {
     private int currentFloor;
     private boolean gameOver;
     private Random random;
+    private int maxFloor;
+    private boolean victory;
 
     private GameState() {
+        this(10);
+    }
+
+    private GameState(int maxFloor) {
         this.currentFloor = 1;
         this.gameOver = false;
         this.random = new Random();
+        this.maxFloor = maxFloor;
+        this.victory = false;
     }
 
     public static GameState getInstance() {
@@ -39,6 +47,10 @@ public class GameState {
 
     public void nextFloor() {
         currentFloor++;
+        if (currentFloor >= maxFloor) {
+            this.victory = true;
+            this.gameOver = true;
+        }
     }
 
     public boolean isGameOver() {
@@ -52,4 +64,8 @@ public class GameState {
     public Random getRandom() {
         return random;
     }
+
+    public int getMaxFloor() { return maxFloor; }
+
+    public boolean hasWon() { return victory; }
 }

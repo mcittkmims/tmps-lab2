@@ -6,7 +6,7 @@ public class Orc extends Monster {
         this.maxHealth = 50 + (floor * 15);
         this.health = maxHealth;
         this.attack = 8 + (floor * 3);
-        this.goldReward = 20 + (floor * 8);
+        this.goldReward = 30 + (floor * 15);
     }
 
     public String getAttackMessage() {

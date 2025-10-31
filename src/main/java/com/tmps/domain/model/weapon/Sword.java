@@ -5,7 +5,7 @@ import com.tmps.domain.model.Player;
 public class Sword extends Weapon {
     public Sword(String name, int damage, int value) {
         super(name, damage, value);
-        this.type = "ranged";
+        this.type = "melee";
     }
 
     @Override

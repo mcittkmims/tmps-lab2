@@ -6,7 +6,7 @@ public class Goblin extends Monster {
         this.maxHealth = 30 + (floor * 10);
         this.health = maxHealth;
         this.attack = 5 + (floor * 2);
-        this.goldReward = 10 + (floor * 5);
+        this.goldReward = 15 + (floor * 10);
     }
 
     public String getAttackMessage() {

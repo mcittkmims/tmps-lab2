@@ -17,7 +17,7 @@ public class Player {
 
     public Player(String name) {
         this.name = name;
-        this.maxHealth = 100;
+        this.maxHealth = 150;
         this.health = maxHealth;
         this.gold = 50;
         this.equippedWeapon = new Sword("very simple simple sword", 5, 0);
@@ -35,7 +35,8 @@ public class Player {
     }
 
     public int attack() {
-        return equippedWeapon.getDamage() + GameState.getInstance().getRandom().nextInt(5);
+        // slightly increase variance and average damage
+        return equippedWeapon.getDamage() + GameState.getInstance().getRandom().nextInt(8);
     }
 
     public void addGold(int amount) {

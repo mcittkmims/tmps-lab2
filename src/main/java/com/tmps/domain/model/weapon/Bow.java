@@ -8,7 +8,7 @@ public class Bow extends Weapon {
     public Bow(String name, int damage, int value, int range) {
         super(name, damage, value);
         this.range = range;
-        this.type = "meele";
+        this.type = "ranged";
     }
 
     @Override
